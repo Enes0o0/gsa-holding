@@ -212,10 +212,7 @@
 }
 
 @media (max-width: 600px) {
-  .about-slider {
-    border-radius: 0;
-    padding: 1.25rem;
-  }
+  .about-slider { border-radius: 0; padding: 1rem; margin-bottom: 2.5rem; }
 
   .about-prev,
   .about-next {
@@ -1136,6 +1133,11 @@ p { margin: 0 0 1rem; }
 }
 
 @media (max-width: 768px) {
+  /* Mobile header: solid, compact, elevated */
+  .site-header { background: #ffffff; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .header-content { padding: 0.75rem 0; }
+  .logo img { height: 48px; width: auto; }
+  .hamburger-menu span { width: 28px; height: 2.5px; }
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -2009,9 +2011,7 @@ p { margin: 0 0 1rem; }
     transform: rotate(90deg);
   }
 
-  .hero-content {
-    padding: 2rem 1rem;
-  }
+  .hero-content { padding: 2rem 1rem; }
 
   .hero-title {
     font-size: clamp(3rem, 8vw, 5rem);
@@ -2058,9 +2058,7 @@ p { margin: 0 0 1rem; }
     font-size: clamp(2rem, 6vw, 3rem);
   }
 
-  .about-content p {
-    font-size: 1.1rem;
-  }
+  .about-content p { font-size: 1rem; line-height: 1.6; }
 
   .services-grid,
   .projects-showcase,
@@ -2148,12 +2146,9 @@ p { margin: 0 0 1rem; }
     font-size: clamp(3rem, 10vw, 6rem);
   }
 
-  .hero-navigation {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 180px;
-  }
+  /* Ensure hero cards sit flush at the bottom on mobile */
+  .hero-section { height: 100svh; }
+  .hero-navigation { bottom: env(safe-area-inset-bottom, 0); right: 0; left: 0; height: 160px; }
 
   .sector-nav {
     gap: 0;
@@ -2174,16 +2169,7 @@ p { margin: 0 0 1rem; }
     display: none;
   }
 
-  .sector-card {
-    padding: 2rem 1rem;
-    flex: 1;
-    min-height: 160px;
-    flex-shrink: 0;
-    border-radius: 0;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    border-left: none;
-  }
+  .sector-card { padding: 1.75rem 1rem; flex: 1; min-height: 150px; flex-shrink: 0; border-radius: 0; opacity: 1; transform: translateY(0) scale(1); border-left: none; }
 
   .sector-card:first-child {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
