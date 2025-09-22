@@ -21,10 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu function
+    const menuItems = $$('.menu-item');
+    const pressedClass = 'is-pressed';
+    const clearPressedStates = () => {
+      menuItems.forEach(item => item.classList.remove(pressedClass));
+    };
     const closeMenuHandler = () => {
       hamburgerMenu.classList.remove('active');
       fullscreenMenu.classList.remove('active');
       document.body.style.overflow = '';
+      clearPressedStates();
     };
 
     // Close button
@@ -50,9 +56,60 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Close when clicking menu items
-    $$('.menu-item').forEach(item => {
-      item.addEventListener('click', closeMenuHandler);
+    // Enhanced menu item interactions with smooth transitions
+    menuItems.forEach(item => {
+      let pressTimer = null;
+      let isNavigating = false;
+
+      // Smooth navigation with minimal visual feedback
+      const smoothNavigate = (e) => {
+        if (isNavigating) return;
+        isNavigating = true;
+
+        e.preventDefault();
+        
+        // Get href for navigation
+        const href = item.getAttribute('href');
+        if (!href || href === '#') {
+          isNavigating = false;
+          return;
+        }
+        
+        // Subtle scale feedback only
+        item.style.transform = 'translate3d(0, 0, 0) scale(0.97)';
+        item.style.opacity = '0.7';
+        
+        // Quick feedback then navigate immediately
+        setTimeout(() => {
+          // Navigate immediately without waiting for menu animation
+          window.location.href = href;
+        }, 60); // Very short feedback, no menu close wait
+      };
+
+      // Touch interactions - simplified
+      item.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'mouse') return;
+        
+        clearTimeout(pressTimer);
+        // Just add subtle visual feedback, no ripple
+        item.style.transform = 'translate3d(0, -1px, 0) scale(0.98)';
+      });
+
+      // Click handler with smooth transition
+      item.addEventListener('click', smoothNavigate);
+
+      const releasePress = () => {
+        clearTimeout(pressTimer);
+        if (!isNavigating) {
+          // Reset to normal state
+          item.style.transform = 'translate3d(0, 0, 0) scale(1)';
+          item.style.opacity = '1';
+        }
+      };
+      
+      ['pointerup', 'pointercancel', 'pointerleave', 'blur'].forEach(evt => {
+        item.addEventListener(evt, releasePress);
+      });
     });
   }
 
