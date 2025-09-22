@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FA Group - Engineering & Construction Excellence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#home">
+        <img src="images/logo_2.png" alt="FA Group">
+      </a>
+      <button class="hamburger-menu" id="hamburgerMenu" type="button" aria-label="Menü aç">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full Screen Menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <div class="menu-overlay left-overlay"></div>
+    <div class="menu-overlay right-overlay"></div>
+    <div class="menu-content">
+      <button class="close-menu" id="closeMenu" aria-label="Menüyü kapat">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="menu-nav">
+        <a href="construction.html" class="menu-item">
+          <span class="menu-title">CONSTRUCTION</span>
+          <span class="menu-subtitle">Engineering & Construction</span>
+        </a>
+        <a href="energy.html" class="menu-item">
+          <span class="menu-title">ENERGY</span>
+          <span class="menu-subtitle">Power & Production</span>
+        </a>
+        <a href="trade.html" class="menu-item">
+          <span class="menu-title">TRADE</span>
+          <span class="menu-subtitle">Commerce & Logistics</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <div class="hero-slider">
+          <div class="slide active">
+            <div class="slide-content">
+              <img src="images/villalalar.png" alt="Construction">
+              <div class="slide-overlay"></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <img src="images/energy_2.png" alt="Energy">
+              <div class="slide-overlay"></div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <img src="images/transportation-logistics-container-cargo-ship-cargo-plane-3d-rendering-illustration.jpg" alt="Trade">
+              <div class="slide-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-content">
+        </div>
+        <div class="hero-navigation">
+          <div class="sector-nav">
+            <div class="sector-card active" data-sector="0">
+              <div class="sector-header">
+                <span class="sector-title">CONSTRUCTION</span>
+              </div>
+              <div class="sector-body">
+                <span class="sector-subtitle">Engineering & Construction</span>
+              </div>
+            </div>
+            <div class="sector-card" data-sector="1">
+              <div class="sector-header">
+                <span class="sector-title">ENERGY</span>
+              </div>
+              <div class="sector-body">
+                <span class="sector-subtitle">Power & Production</span>
+              </div>
+            </div>
+            <div class="sector-card" data-sector="2">
+              <div class="sector-header">
+                <span class="sector-title">TRADE</span>
+              </div>
+              <div class="sector-body">
+                <span class="sector-subtitle">Commerce & Logistics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="life-fa">
+      <div class="container">
+        <div class="about-slider" id="aboutSlider" tabindex="0" aria-label="FA Group hakkında slayt gösterisi">
+          <div class="about-slide active" data-label="Our Vision">
+            <div class="about-media">
+              <img src="images/Google_AI_Studio_2025-09-22T18_27_37.378Z.png" alt="Our Vision">
+            </div>
+            <div class="about-text">
+              <h3 class="about-tag">OUR VISION</h3>
+              <p>Pioneering the future of industry through revolutionary engineering excellence and strategic innovation. We architect tomorrow's possibilities, transforming visionary concepts into breakthrough realities that redefine global standards across construction, energy, and trade sectors.</p>
+            </div>
+          </div>
+
+          <div class="about-slide" data-label="Sustainability at FA">
+            <div class="about-media">
+              <img src="images/Google_AI_Studio_2025-09-22T18_31_18.342Z.png" alt="Sustainability at FA">
+            </div>
+            <div class="about-text">
+              <h3 class="about-tag">SUSTAINABILITY AT FA</h3>
+              <p>Leading the charge toward a carbon-neutral future through cutting-edge sustainable technologies and responsible innovation. Every project we deliver integrates environmental stewardship with uncompromising quality, creating resilient infrastructure for generations to come.</p>
+            </div>
+          </div>
+
+          <div class="about-slide" data-label="Life at FA">
+            <div class="about-media">
+              <img src="images/Google_AI_Studio_2025-09-22T18_11_34.835Z.png" alt="Life at FA">
+            </div>
+            <div class="about-text">
+              <h3 class="about-tag">LIFE AT FA</h3>
+              <p>An elite ecosystem where visionary talent thrives and breakthrough innovation emerges. We cultivate excellence through collaborative mastery, empowering our teams to push boundaries and achieve extraordinary impact in shaping tomorrow's world.</p>
+            </div>
+          </div>
+
+          <div class="about-controls">
+            <button class="about-prev" type="button" aria-label="Previous slide">‹</button>
+            <button class="about-next" type="button" aria-label="Next slide">›</button>
+          </div>
+
+          <div class="about-meta" aria-hidden="true">
+            <span class="about-counter">
+              <span class="about-counter-current">01</span>
+              <span class="about-counter-divider">/</span>
+              <span class="about-counter-total">03</span>
+            </span>
+          </div>
+          <p class="visually-hidden" id="aboutLiveRegion" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <h3 class="footer-heading">QUICK ACCESS</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="construction.html">CONSTRUCTION</a></li>
+            <li><a href="energy.html">ENERGY</a></li>
+            <li><a href="trade.html">TRADE</a></li>
+          </ul>
+        </div>
+        <div class="footer-brand">
+          <img src="images/logo_2.png" alt="FA Group" class="footer-logo">
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer-heading">Contact Us</h3>
+          <address>Levent District, Yeni Sülün Street, Begonya No.2<br>Beşiktaş, Istanbul Turkey</address>
+          <a href="mailto:info@holding-fa.com" class="footer-email">info@holding-fa.com</a>
+          <a href="tel:+902128129245" class="footer-phone">+90 212 812 92 45</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© 2025 FA Group. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
