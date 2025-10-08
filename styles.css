@@ -738,7 +738,8 @@ p { margin: 0 0 1rem; }
   will-change: background, backdrop-filter;
 }
 
-/* Page-specific: solid white header for trade/construction/energy */
+/* Page-specific: solid white header for home/trade/construction/energy */
+.home-page .site-header,
 .construction-page .site-header,
 .energy-page .site-header,
 .trade-page .site-header {
@@ -765,7 +766,7 @@ p { margin: 0 0 1rem; }
 .site-header .logo img { 
   height: 75px !important; 
   width: auto !important; 
-  filter: brightness(0) saturate(100%); 
+  filter: invert(14%) sepia(98%) saturate(7426%) hue-rotate(359deg) brightness(97%) contrast(116%);
 }
 
 .hamburger-menu {
@@ -1453,7 +1454,7 @@ p { margin: 0 0 1rem; }
 
 .footer-logo {
   height: 130px !important;
-  filter: brightness(0) invert(1);
+  filter: invert(14%) sepia(98%) saturate(7426%) hue-rotate(359deg) brightness(97%) contrast(116%);
   margin-bottom: 2rem;
 }
 
