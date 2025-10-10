@@ -723,30 +723,30 @@ p { margin: 0 0 1rem; }
 
 .btn.light:hover { background: var(--primary-red); color: white; }
 
-/* Transparent Header with subtle blur */
+/* Red Header with subtle blur */
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(135deg, #d31717 0%, #b81212 100%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: background 0.2s ease, backdrop-filter 0.2s ease;
   will-change: background, backdrop-filter;
 }
 
-/* Page-specific: solid white header for home/trade/construction/energy */
+/* Page-specific: solid red header for home/trade/construction/energy */
 .home-page .site-header,
 .construction-page .site-header,
 .energy-page .site-header,
 .trade-page .site-header {
-  background: #ffffff;
+  background: linear-gradient(135deg, #d31717 0%, #b81212 100%);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .header-content {
@@ -766,7 +766,7 @@ p { margin: 0 0 1rem; }
 .site-header .logo img { 
   height: 75px !important; 
   width: auto !important; 
-  filter: invert(14%) sepia(98%) saturate(7426%) hue-rotate(359deg) brightness(97%) contrast(116%);
+  filter: brightness(0) invert(1);
 }
 
 .hamburger-menu {
@@ -791,7 +791,7 @@ p { margin: 0 0 1rem; }
 .hamburger-menu span {
   width: 30px;
   height: 3px;
-  background: var(--primary-dark);
+  background: #ffffff;
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
   will-change: transform, opacity;
@@ -1560,8 +1560,8 @@ p { margin: 0 0 1rem; }
 }
 
 @media (max-width: 768px) {
-  /* Mobile header: solid, compact, elevated */
-  .site-header { background: #ffffff; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  /* Mobile header: solid red, compact, elevated */
+  .site-header { background: linear-gradient(135deg, #d31717 0%, #b81212 100%); backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
   .header-content { padding: 0.75rem 0; }
   .logo img { height: 48px; width: auto; }
   .hamburger-menu span { width: 28px; height: 2.5px; }
