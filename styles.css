@@ -809,6 +809,10 @@ p { margin: 0 0 1rem; }
   will-change: transform, opacity;
 }
 
+.hamburger-menu.active span {
+  transition: transform 0.3s ease 0.35s, opacity 0.3s ease 0.35s;
+}
+
 .hamburger-menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
@@ -891,10 +895,53 @@ p { margin: 0 0 1rem; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.2s ease;
 }
 
-.close-menu:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+.fullscreen-menu.active .close-menu {
+  opacity: 1;
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease 0.4s;
+}
+
+.close-menu.closing {
+  transform: rotate(180deg);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.close-menu:hover { 
+  background: rgba(255,255,255,0.2); 
+  transform: rotate(90deg); 
+}
+
+.close-menu:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+/* Mobile override: prevent close button rotation while closing */
+@media (max-width: 768px) {
+  .close-menu {
+    -webkit-tap-highlight-color: transparent; /* iOS/Android tap highlight'ı kapat */
+    outline: none;
+    box-shadow: none;
+    background: rgba(255,255,255,0.1); /* sabit arka plan, flash yok */
+  }
+
+  .close-menu:focus,
+  .close-menu:hover,
+  .close-menu:active {
+    transform: none; /* touch'ta dönmesin */
+    background: rgba(255,255,255,0.1); /* hover/active'de arka plan değişmesin */
+  }
+
+  .close-menu.closing {
+    transform: none; /* kapanırken dönmesin */
+    opacity: 0;
+    transition: opacity 0.25s ease; /* sadece opacity animasyonu */
+  }
+}
 
 .menu-nav {
   display: flex;
@@ -1359,8 +1406,13 @@ p { margin: 0 0 1rem; }
   }
 
   .about-main-title {
-    font-size: clamp(2rem, 6vw, 2.5rem);
-    margin-bottom: 2rem;
+    font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+    margin-bottom: 0.75rem;
+    white-space: nowrap;
+    letter-spacing: 0.25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-main-text {

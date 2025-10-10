@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
       closeMenu.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        closeMenuHandler();
+        closeMenu.classList.add('closing');
+        setTimeout(() => {
+          closeMenuHandler();
+          closeMenu.classList.remove('closing');
+        }, 100);
       });
     }
     
