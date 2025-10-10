@@ -579,10 +579,12 @@
    }
 
    /* Active page indicator */
-   .menu-item.active {
-     border-color: rgba(255, 255, 255, 0.3) !important;
-     background: rgba(255, 255, 255, 0.1) !important;
-   }
+  /* Mobile overlay: active (current) section matches desktop red card */
+  .menu-item.active {
+    background: linear-gradient(135deg, #5a0b0b 0%, #2a0808 100%) !important; /* deep red card */
+    border: 1px solid rgba(211, 23, 23, 0.35) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06), 0 8px 24px rgba(0,0,0,0.35) !important;
+  }
 
   .footer-brand .footer-logo {
     height: 90px !important; /* mobil için logoyu büyüt */
@@ -968,8 +970,8 @@ p { margin: 0 0 1rem; }
 }
 
 .menu-item.active {
-  background: rgba(211, 23, 23, 0.2);
-  border: 1px solid rgba(211, 23, 23, 0.3);
+  background: linear-gradient(135deg, #d31717 0%, #b81212 100%);
+  border: 1px solid rgba(211, 23, 23, 0.45);
 }
 
 @media (hover: hover) and (pointer: fine) {
