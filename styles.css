@@ -1406,10 +1406,10 @@ p { margin: 0 0 1rem; }
   }
 
   .about-main-title {
-    font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+    font-size: clamp(0.9rem, 3.3vw, 1.2rem);
     margin-bottom: 0.75rem;
     white-space: nowrap;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1420,6 +1420,14 @@ p { margin: 0 0 1rem; }
     line-height: 1.7;
     text-align: left;
     padding: 0;
+  }
+}
+
+/* Extra-small phones: ensure slogan fits without horizontal scroll */
+@media (max-width: 390px) {
+  .about-main-title {
+    font-size: clamp(0.82rem, 3.2vw, 1.05rem);
+    letter-spacing: 0.1px;
   }
 }
 
