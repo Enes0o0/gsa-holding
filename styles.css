@@ -1720,14 +1720,7 @@ p { margin: 0 0 1rem; }
   .logo { display: flex; align-items: center; gap: 0.5rem; }
   .logo img { height: 48px; width: auto; }
   .hamburger-menu span { width: 28px; height: 2.5px; }
-  .header-slogan {
-    display: inline-block;
-    font-size: 0.85rem;
-    margin-left: 0;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-    color: rgba(255,255,255,0.92);
-  }
+  .header-slogan { display: none; }
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
