@@ -1416,7 +1416,7 @@ p { margin: 0 0 1rem; }
 
   .about-main-title {
     font-size: clamp(1rem, 3.5vw, 1.3rem);
-    font-weight: 800; /* stronger like section headings */
+    font-weight: 900; /* stronger like section headings */
     color: var(--primary-red); /* same red as CONSTRUCTION DIVISION */
     margin-bottom: 0.75rem;
     white-space: normal;
@@ -2787,8 +2787,8 @@ p { margin: 0 0 1rem; }
     display: none;
   }
 
-  /* Show vertical dividers between sector cards on mobile */
-  .sector-card { padding: 1.75rem 1rem; flex: 1; min-height: 160px; flex-shrink: 0; border-radius: 0; opacity: 1; transform: translateY(0) scale(1); border-left: 1px solid rgba(255, 255, 255, 0.3); margin: 0; }
+  /* Show vertical dividers between sector cards on mobile (match desktop grey) */
+  .sector-card { padding: 1.75rem 1rem; flex: 1; min-height: 160px; flex-shrink: 0; border-radius: 0; opacity: 1; transform: translateY(0) scale(1); border-left: 1px solid rgba(100, 100, 100, 0.4); margin: 0; }
 
   .sector-card:first-child {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
