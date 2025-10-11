@@ -1,0 +1,13 @@
+# robots.txt for FA Group
+User-agent: *
+Allow: /
+
+# Disallow specific files
+Disallow: /script.js
+Disallow: /styles.css
+Disallow: /.vscode/
+Disallow: /not.txt
+
+# Sitemap
+Sitemap: https://www.group-fa.com/sitemap.xml
+
